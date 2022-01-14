@@ -17,29 +17,29 @@ test("renders without errors", () => {
 });
 
 test("shows success message on submit with form details", () => {
-    // render(<CheckoutForm />)
+    render(<CheckoutForm />)
 
-    // const typeFirst = screen.getByLabelText(/first name:/i)
-    // const typeLast = screen.getByLabelText(/last name:/i)
-    // const typeAddress = screen.getByLabelText(/address:/i)
-    // const typeCity = screen.getByLabelText(/city:/i)
-    // const typeState = screen.getByLabelText(/state:/i)
-    // const typeZip = screen.getByLabelText(/zip:/i)
-    // const button = screen.getByRole('button')
+    const typeFirst = screen.getByLabelText(/first name:/i)
+    const typeLast = screen.getByLabelText(/last name:/i)
+    const typeAddress = screen.getByLabelText(/address:/i)
+    const typeCity = screen.getByLabelText(/city:/i)
+    const typeState = screen.getByLabelText(/state:/i)
+    const typeZip = screen.getByLabelText(/zip:/i)
+    const button = screen.getByRole('button')
 
-    // const successMsg = () => screen.getByTestId('successMessage')
+    const successMsg = () => screen.getByTestId('successMessage')
 
-    // userEvent.type(typeFirst, 'Bugsy')
-    // userEvent.type(typeLast, 'Bugs')
-    // userEvent.type(typeAddress, '88 Remsen St')
-    // userEvent.type(typeCity, 'Brooklyn')
-    // userEvent.type(typeState, 'New York')
-    // userEvent.type(typeZip, '11201')
-    // userEvent.click(button)
+    userEvent.type(typeFirst, 'Bugsy')
+    userEvent.type(typeLast, 'Bugs')
+    userEvent.type(typeAddress, '88 Remsen St')
+    userEvent.type(typeCity, 'Brooklyn')
+    userEvent.type(typeState, 'New York')
+    userEvent.type(typeZip, '11201')
+    userEvent.click(button)
 
-    // expect(successMsg()).toBeInTheDocument()
-    // expect(successMsg().children[4]).toHaveTextContent('Bugsy Bugs')
-    // expect(successMsg().children[5]).toHaveTextContent('88 Remsen St')
-    // expect(successMsg().children[6]).toHaveTextContent('Brooklyn, New York 11201')
+    expect(successMsg()).toBeInTheDocument()
+    expect(successMsg().children[4]).toHaveTextContent('Bugsy Bugs')
+    expect(successMsg().children[5]).toHaveTextContent('88 Remsen St')
+    expect(successMsg().children[6]).toHaveTextContent('Brooklyn, New York 11201')
 
 });
